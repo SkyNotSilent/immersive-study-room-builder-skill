@@ -1,0 +1,17 @@
+{
+  "skill_name": "design-skills",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "使用 design-skills 和我提供的图片，直接生成并测试一个支持课程分类的 25/5 番茄钟网页。",
+      "expected_output": "生成真实可运行的 study-room-output/index.html，并报告绝对路径。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "帮我做沉浸式学习网页，不提供图片也可以。",
+      "expected_output": "使用内置背景生成可运行网页，而不是因没有图片路径停止。",
+      "files": []
+    }
+  ]
+}

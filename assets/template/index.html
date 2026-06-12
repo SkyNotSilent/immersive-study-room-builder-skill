@@ -41,6 +41,14 @@
         </div>
 
         <div id="setup-panel" class="setup-panel">
+          <div class="course-row">
+            <div id="course-list" class="course-list" aria-label="选择课程"></div>
+            <button id="show-course-form" class="course-add" type="button" aria-label="添加课程">＋</button>
+          </div>
+          <form id="course-form" class="course-form" hidden>
+            <input id="course-name" maxlength="12" autocomplete="off" placeholder="输入课程名称" aria-label="课程名称" />
+            <button type="submit">添加</button>
+          </form>
           <div class="presets" aria-label="快捷时长">
             <button class="preset is-active" data-minutes="25">25 分钟</button>
             <button class="preset" data-minutes="45">45 分钟</button>
@@ -71,6 +79,7 @@
             <span class="today__label">今日专注</span>
           </div>
         </div>
+        <div id="course-summary" class="course-summary"></div>
       </section>
 
       <footer class="footer-note">
@@ -83,7 +92,7 @@
       <form method="dialog">
         <p class="dialog-kicker">提前结束</p>
         <h2>要合上这一页吗？</h2>
-        <p>已经专注的完整分钟仍会记入今日记录。</p>
+        <p>专注阶段已完成的完整分钟仍会记入今日记录。</p>
         <div class="dialog-actions">
           <button value="cancel" class="button button--quiet">继续专注</button>
           <button id="confirm-end" value="confirm" class="button button--primary">结束本次</button>

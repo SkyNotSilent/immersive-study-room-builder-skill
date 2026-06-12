@@ -1,23 +1,26 @@
 # Ready-to-Use Prompt
 
-Send this prompt together with the skill folder and one background image:
+Send this prompt together with one reference image:
 
 ```text
-Use the immersive-study-room-builder skill to create the webpage.
+请使用 design-skills，直接完成并测试一个可以运行的 Web 网页，不要只输出方案。
 
-Important rules:
-1. Run the bundled build_study_room.py script first. Do not write a new webpage from scratch.
-2. Use the image I provided as the full-screen background.
-3. Keep the center completely transparent. Do not add a card, panel, box, circle, or solid background behind the timer.
-4. Keep only the existing functions: preset duration, custom duration input, start, pause, continue, end, and today's focus record.
-5. Do not add login, music, tasks, scene switching, social features, charts, or a backend.
-6. Do not replace the bundled timer or local-storage logic.
-7. After generating the webpage, verify every item in references/acceptance-checklist.md.
+帮我做一个适合自己学习节奏的番茄钟网页。
 
-My requested changes:
-- Product name: [fill in]
-- Subtitle: [fill in]
-- Default duration: [fill in]
-- Preset durations: [fill in]
-- Other wording changes: [fill in]
+功能要求：
+- 默认 25 分钟专注、5 分钟休息
+- 专注和休息结束后自动切换
+- 可以添加和选择不同课程
+- 每完成一次专注，记录对应课程的完成次数
+- 显示今日完成次数和累计专注时长
+- 刷新页面后保留记录
+
+设计要求：
+- 背景使用我提供的图片
+- 自行分析图片的色彩、字体感觉、排版和氛围
+- 整体保持安静、沉浸、适合学习
+- 不直接复制图片中的文字
+- 不添加复杂或无关功能
+
+必须实际生成网页文件、打开测试，并告诉我最终 index.html 的路径。
 ```
