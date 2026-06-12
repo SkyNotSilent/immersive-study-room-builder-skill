@@ -4,13 +4,13 @@
     {
       "id": 1,
       "prompt": "使用 design-skills 和我提供的图片，直接生成并测试一个支持课程分类的 25/5 番茄钟网页。",
-      "expected_output": "生成真实可运行的 study-room-output/index.html，并报告绝对路径。",
+      "expected_output": "依次显示需求理解、参考图分析、功能规划、交互设计、网页生成、测试优化和交付完成的简短进度，并生成真实可运行的 study-room-output/index.html。",
       "files": []
     },
     {
       "id": 2,
       "prompt": "帮我做沉浸式学习网页，不提供图片也可以。",
-      "expected_output": "使用内置背景生成可运行网页，而不是因没有图片路径停止。",
+      "expected_output": "显示完整阶段进度，使用内置背景生成可运行网页，而不是因没有图片路径停止。",
       "files": []
     }
   ]
