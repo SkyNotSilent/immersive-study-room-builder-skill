@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#30251b" />
+    <title>窗边自习室</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600&family=IBM+Plex+Mono:wght@400;500&family=LXGW+WenKai:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="room">
+      <div class="room__backdrop" aria-hidden="true"></div>
+      <div class="room__light" aria-hidden="true"></div>
+      <div class="room__grain" aria-hidden="true"></div>
+
+      <header class="masthead">
+        <div class="brand">
+          <span class="brand__mark">窗</span>
+          <div>
+            <strong>窗边自习室</strong>
+            <small>让时间慢下来</small>
+          </div>
+        </div>
+        <time id="clock" class="clock" aria-label="当前时间"></time>
+      </header>
+
+      <section class="focus-card" aria-labelledby="focus-title">
+        <div class="focus-card__topline">
+          <span id="status-label">准备专注</span>
+          <span class="focus-card__rule"></span>
+          <span id="session-label">第 1 次</span>
+        </div>
+
+        <div class="timer-wrap">
+          <p id="focus-title" class="eyebrow">本次专注</p>
+          <output id="timer" class="timer" aria-live="polite">25:00</output>
+          <p id="timer-note" class="timer-note">选一个时长，翻开今天的第一页。</p>
+        </div>
+
+        <div id="setup-panel" class="setup-panel">
+          <div class="presets" aria-label="快捷时长">
+            <button class="preset is-active" data-minutes="25">25 分钟</button>
+            <button class="preset" data-minutes="45">45 分钟</button>
+            <button class="preset" data-minutes="60">60 分钟</button>
+          </div>
+          <label class="custom-time">
+            <span>自定义</span>
+            <span class="custom-time__control">
+              <input id="custom-minutes" type="number" min="1" max="180" inputmode="numeric" value="60" aria-label="自定义专注分钟数" />
+              <span class="custom-time__unit">分钟</span>
+            </span>
+          </label>
+        </div>
+
+        <div class="actions">
+          <button id="primary-action" class="button button--primary">开始专注</button>
+          <button id="end-action" class="button button--quiet" hidden>结束本次</button>
+        </div>
+
+        <div class="today">
+          <div>
+            <span class="today__value"><strong id="completed-count">0</strong><small>次</small></span>
+            <span class="today__label">今日完成</span>
+          </div>
+          <span class="today__divider"></span>
+          <div>
+            <span class="today__value"><strong id="focused-minutes">0</strong><small>分钟</small></span>
+            <span class="today__label">今日专注</span>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer-note">
+        <span class="footer-note__line"></span>
+        <span>今日宜：安静地完成一件事</span>
+      </footer>
+    </main>
+
+    <dialog id="end-dialog">
+      <form method="dialog">
+        <p class="dialog-kicker">提前结束</p>
+        <h2>要合上这一页吗？</h2>
+        <p>已经专注的完整分钟仍会记入今日记录。</p>
+        <div class="dialog-actions">
+          <button value="cancel" class="button button--quiet">继续专注</button>
+          <button id="confirm-end" value="confirm" class="button button--primary">结束本次</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+interface:
+  display_name: "沉浸式自习室生成器"
+  short_description: "用背景图片稳定生成透明极简专注计时网页模板"
+  brand_color: "#8A704B"
+  default_prompt: "Use $immersive-study-room-builder to create a study timer webpage from my background image and requirements."
+
+policy:
+  allow_implicit_invocation: true
